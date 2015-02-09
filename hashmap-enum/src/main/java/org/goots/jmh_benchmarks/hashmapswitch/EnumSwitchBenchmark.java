@@ -1,4 +1,4 @@
-package org.goots.jmh_benchmarks;
+package org.goots.jmh_benchmarks.hashmapswitch;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,8 +13,8 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 
 @State(Scope.Benchmark)
-@Warmup(iterations = 10)
-@Measurement (iterations = 10)
+@Warmup(iterations = 15)
+@Measurement (iterations = 15)
 public class EnumSwitchBenchmark
 {
     @Param({"_non_existent", "_repository_id", "_get_policy", "operation"})
@@ -25,7 +25,7 @@ public class EnumSwitchBenchmark
     @OutputTimeUnit(TimeUnit.MICROSECONDS)
     public boolean testEnum()
     {
-        return EnumClass.SpecialOps.getSpecialOperation(value) != null;
+        return Utils.SpecialOps.getSpecialOperation(value) != null;
     }
 
     @Benchmark

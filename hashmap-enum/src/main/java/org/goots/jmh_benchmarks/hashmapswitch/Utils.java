@@ -1,4 +1,4 @@
-package org.goots.jmh_benchmarks;
+package org.goots.jmh_benchmarks.hashmapswitch;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by Nick Cross on 08/02/15.
  */
-public class EnumClass
+public class Utils
 {
 
     /**
